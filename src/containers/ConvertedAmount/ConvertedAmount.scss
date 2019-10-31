@@ -1,0 +1,22 @@
+@import './../../variables';
+
+.converted-amount {
+  @include ResultBox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__results {
+    width: 80%;
+    &__equal {
+      margin: 0 1rem;
+    }
+    &--value {
+      font-size: 1.8rem;
+    }
+    &--currency {
+      font-size: 1rem;
+      margin-left: 0.5rem;
+    }
+  }
+}

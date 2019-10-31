@@ -1,0 +1,31 @@
+@import './../../variables';
+
+.convert-bar {
+  width: 80vw;
+  background-color: $color-white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 5px 10px 0 $color-secondary;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__left-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__span {
+    margin: 0 2rem;
+  }
+}
+
+.visibility-hidden {
+  display: none;
+}
+.visibility-visible {
+  display: flex;
+}

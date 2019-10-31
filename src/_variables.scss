@@ -1,0 +1,14 @@
+$color-primary: rgb(51, 108, 192);
+$color-primary-light: rgb(78, 143, 241);
+$color-secondary: rgb(25, 25, 165);
+$color-secondary-light: rgb(56, 56, 250);
+$color-white: rgb(248, 248, 248);
+$color-black: rgb(10, 10, 10);
+
+@mixin ResultBox {
+  background-color: $color-white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 5px 10px 0 $color-secondary;
+  height: 30vh;
+}

@@ -1,7 +1,7 @@
-### Currency converter - Mateusz Pęciak
+### Currency converter
 
 ## Introduction 
-A currency converter that fetches data from exchangeratesapi.io - an alternative for fixer.io.
+A currency converter that fetches data from exchangeratesapi.io.
 
 ## Table of contents
 * [General info](#general-info)

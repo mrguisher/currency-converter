@@ -1,0 +1,25 @@
+@import './../../variables';
+
+.historical-rate {
+  @include ResultBox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+
+  &__result {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  &__desc {
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+}
+.date-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 4rem;
+}

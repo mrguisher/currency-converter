@@ -29,3 +29,23 @@
 .visibility-visible {
   display: flex;
 }
+
+#standard-name {
+  font-size: 2rem !important;
+}
+
+.input-amount {
+  max-width: 5rem;
+  margin-right: 2rem;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  &:focus {
+    color: $color-secondary;
+  }
+}
+
+.MuiInputBase-input {
+  text-align: center !important;
+}

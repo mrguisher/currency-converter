@@ -23,6 +23,10 @@ const months = {
 class HistoricalRate extends Component {
   
   async getHistoricalRate(direction, event) {
+
+    const setLoadingStatus = status => this.props.onLoadingResults(status);
+    setLoadingStatus(true);
+
     const convertTo = this.props.currencyConvertedTo;
     const convertFrom = this.props.currencyConvertedFrom;
 
@@ -45,27 +49,25 @@ class HistoricalRate extends Component {
     direction === 'from' && (dateFrom = result);
 
     // fetch API
+    const alertMessage = 'Base currency unavailable';
     const initialHistoricalRateEndpoint = `https://api.exchangeratesapi.io/${dateFrom}?base=${convertFrom}&symbols=${convertTo}`;
     const closingHistoricalRateEndpoint = `https://api.exchangeratesapi.io/${dateTo}?base=${convertFrom}&symbols=${convertTo}`;
 
-    const setLoadingStatus = status => this.props.onLoadingResults(status);
-    setLoadingStatus(true);
-
-    const alertMessage = 'Base currency unavailable';
-
-    const getHistoricalRateEndpoint = (endpoint, type = 'initialRate') => {
-      fetch(endpoint)
+      await fetch(initialHistoricalRateEndpoint)
       .then(res => (res.ok === true ? res.json() : alert(alertMessage)))
-      .then(data => (type === 'initialRate' ? (initialRate = Object.values(data.rates)[0]) : (closingRate = Object.values(data.rates)[0])))
+      .then(data => initialRate = Object.values(data.rates)[0])
       .catch(err => err);
-    }
-    await getHistoricalRateEndpoint(initialHistoricalRateEndpoint, 'initialRate');
-    await getHistoricalRateEndpoint(closingHistoricalRateEndpoint, 'closingRate');
+
+      await fetch(closingHistoricalRateEndpoint)
+      .then(res => (res.ok === true ? res.json() : alert(alertMessage)))
+      .then(data => closingRate = Object.values(data.rates)[0])
+      .catch(err => err);
     
-    const rateChangeCalculate = (initialRate, closingRate) => {
-      let difference = closingRate - initialRate;
-      let ratio = (difference / closingRate) * 100;
-      Math.max(initialRate, closingRate) === closingRate
+    // compute rate change
+    const rateChangeCalculate = (intRate, cloRate) => {
+      let difference = cloRate - intRate;
+      let ratio = (difference / cloRate) * 100;
+      Math.max(intRate, cloRate) === cloRate
         ? (rateChange = `+${ratio.toFixed(2)} %`)
         : (rateChange = `${ratio.toFixed(2)} %`);
     };

@@ -13,10 +13,9 @@ describe('Button component', () => {
           expect(text).toBe('Convert')
      })
      it('should call function on click',() => {
-          let status = false
-          const funToBeCalled = () => status = true
+          const funToBeCalled = jest.fn()
           const wrapper = shallow(<Button onClick={funToBeCalled}></Button>)
           wrapper.simulate('click')
-          expect(status).toBeTruthy()
+          expect(funToBeCalled).toHaveBeenCalledTimes(1)
      })
 })

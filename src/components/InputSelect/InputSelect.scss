@@ -8,6 +8,18 @@
   padding: 0.4rem;
   font-size: 1.2rem;
   width: 5rem;
+  text-align: center;
+
+  @include respond(tab-port) {
+    width: 3rem;
+    font-size: .9rem;
+  }
+  @include respond(small-phone) {
+    width: 2rem;
+    font-size: .7rem;
+  }
+
+  
 }
 
 .MuiInputBase-root {

@@ -32,3 +32,7 @@ go to the project directory and install it locally using npm:
 
 `$ npm install`     
 `$ npm start`
+
+## Tests
+To run unit tests:
+`$ npm run test`

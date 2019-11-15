@@ -51,7 +51,7 @@ class ConvertBar extends Component {
           })
         : null;
 
-    submitResults();
+    await submitResults();
     setLoadingResultsStatus(false);
   }
 

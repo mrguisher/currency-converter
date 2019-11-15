@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import DateFnsUtils from '@date-io/date-fns';
 import 'date-fns';
@@ -28,3 +29,8 @@ const DatePicker = props => {
 };
 
 export default DatePicker;
+
+DatePicker.propTypes = {
+  onChange: PropTypes.func,
+  value: PropTypes.string
+}

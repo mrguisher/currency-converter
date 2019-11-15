@@ -17,6 +17,8 @@ App is based on three main containers: ConvertBar - gets amount to convert and t
 * React 16.10
 * Redux
 * SASS
+* Jest
+* Enzyme
 * material UI
 
 ## Features

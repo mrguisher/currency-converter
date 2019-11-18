@@ -45,11 +45,9 @@ const reducer = (state = initialState, action) => {
         ...state,
         currencyToConvertTo: action.payload,
       };
-
     case actionTypes.SUBMIT_AMOUNT_TO_CONVERT:
       return {
         ...state,
-
         amountConvertedFrom: action.amountConvertedFrom,
         amountConvertedTo: action.amountConvertedTo,
         currencyConvertedTo: action.currencyConvertedTo,

@@ -24,4 +24,10 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
+  @include respond(phone) {
+	flex-direction: column;
+	min-height: unset;
+	align-items: center;
+ }
 }

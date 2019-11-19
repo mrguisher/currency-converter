@@ -16,16 +16,29 @@
     width: 70vw;
   }
   @include respond(phone) {
-    width: 85vw;
-    padding: .8rem 1.2rem;
+    width: 75vw;
+	 padding: .8rem 1.2rem;
+	 flex-direction: column;
   }
 
   &__left-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+	 align-items: center;
+
+	 @include respond(phone) {
+		margin-bottom: 2rem;
+		flex-direction: column;
+	 }
   }
+  &__currency-box {
+		display: flex;
+		flex-direction: row;
+		@include respond(phone) {
+			margin-top: 2rem;
+		}
+  }	
   &__span {
     margin: 0 2rem;
 
@@ -61,11 +74,11 @@
   }
 
   @include respond(tab-port) {
-    width: 3rem;
+    max-width: 3rem;
   }
   @include respond(phone) {
-    width: 2rem;
-    margin-right: 1rem;
+	max-width: unset;
+	 margin-right: 0;
   }
 }
 

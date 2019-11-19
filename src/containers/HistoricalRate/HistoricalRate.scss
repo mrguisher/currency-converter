@@ -7,6 +7,11 @@
   align-items: center;
   width: 40vw;
 
+  @include respond(phone) {
+	width: 60vw;
+	margin-top: 2rem;
+	}
+
   &__result {
     font-size: 2rem;
     font-weight: 500;
@@ -22,4 +27,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   margin-bottom: 4rem;
+
+  @include respond(phone) {
+	  margin-bottom: unset;
+  }
 }

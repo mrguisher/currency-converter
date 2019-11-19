@@ -75,9 +75,11 @@ class ConvertBar extends Component {
               event.key === 'Enter' && this.getConvertedAmount()
             }
           />
-          <InputSelect direction="from"></InputSelect>
-          <span className="convert-bar__span">to</span>
-          <InputSelect direction="to"></InputSelect>
+			 <div className="convert-bar__currency-box">
+				<InputSelect direction="from"></InputSelect>
+				<span className="convert-bar__span">to</span>
+				<InputSelect direction="to"></InputSelect>
+			 </div>
         </div>
 
         <Button onClick={() => this.getConvertedAmount()}>Convert</Button>

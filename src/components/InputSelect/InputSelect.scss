@@ -11,15 +11,13 @@
   text-align: center;
 
   @include respond(tab-port) {
-    width: 3rem;
+    width: 2rem;
     font-size: .9rem;
   }
   @include respond(small-phone) {
-    width: 2rem;
+    width: 1.8rem;
     font-size: .7rem;
   }
-
-  
 }
 
 .MuiInputBase-root {

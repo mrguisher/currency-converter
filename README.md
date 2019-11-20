@@ -12,6 +12,7 @@ A currency converter that fetches data from exchangeratesapi.io.
 ## General info
 App is based on three main containers: ConvertBar - gets amount to convert and two currencies, ConvertedAmount - displays percentage rate difference and HistoricalRate - displays historical rate.
 
+
 ## Technologies
 * JavaScript
 * React 16.10
@@ -20,6 +21,10 @@ App is based on three main containers: ConvertBar - gets amount to convert and t
 * Jest
 * Enzyme
 * material UI
+
+## Screenshots
+![mockup weather-app](/mockup/mockup.png)
+![mockup weather-app](/mockup/mockup2.png)
 
 ## Features
 * convert currencies with the latest rate

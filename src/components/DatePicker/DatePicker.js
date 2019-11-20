@@ -9,7 +9,7 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 
-const DatePicker = props => {
+const DatePicker = ({ label, value, onChange}) => {
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <KeyboardDatePicker
@@ -17,9 +17,9 @@ const DatePicker = props => {
         variant="inline"
         format="yyyy-MM-dd"
         id="date-picker-inline"
-        label={props.label}
-        value={props.value}
-        onChange={props.onChange}
+        label={label}
+        value={value}
+        onChange={onChange}
         KeyboardButtonProps={{
           'aria-label': 'change date',
         }}

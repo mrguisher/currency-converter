@@ -1,5 +1,7 @@
 ### Currency converter
 
+live: https://www.mateuszpeciak.pl/currency-converter/
+
 ## Introduction 
 A currency converter that fetches data from exchangeratesapi.io.
 

@@ -62,7 +62,7 @@ class ConvertBar extends Component {
           <input
             id="standard-name"
             className="input-amount"
-            placeholder={'0'}
+            placeholder={'1'}
             value={
               this.props.amountInputValue !== 0
                 ? this.props.amountInputValue
